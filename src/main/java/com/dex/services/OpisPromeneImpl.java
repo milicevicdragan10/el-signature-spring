@@ -23,4 +23,9 @@ public class OpisPromeneImpl implements OpisPromeneService {
     public void deleteById(Long idToDelete) {
 
     }
+
+    @Override
+    public OpisPromene findById(Long l) {
+        return null;
+    }
 }

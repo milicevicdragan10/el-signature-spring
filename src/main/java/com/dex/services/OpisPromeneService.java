@@ -8,4 +8,6 @@ public interface OpisPromeneService {
     List<OpisPromene> vratiListuOpisaPromena();
 
     void deleteById(Long idToDelete);
+
+    OpisPromene findById(Long l);
 }
