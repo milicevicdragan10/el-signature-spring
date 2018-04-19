@@ -18,4 +18,9 @@ public class OpisPromeneImpl implements OpisPromeneService {
     public List<OpisPromene> vratiListuOpisaPromena() {
         return opisPromeneRepository.findAll();
     }
+
+    @Override
+    public void deleteById(Long idToDelete) {
+
+    }
 }

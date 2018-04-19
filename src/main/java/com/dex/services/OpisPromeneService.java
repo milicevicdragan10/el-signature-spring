@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface OpisPromeneService {
     List<OpisPromene> vratiListuOpisaPromena();
+
+    void deleteById(Long idToDelete);
 }
