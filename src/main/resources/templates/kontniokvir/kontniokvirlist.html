@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Kontni okvir</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th>
+            Kontni okvir ID
+        </th>
+        <th>
+            Konto
+        </th>
+        <th>
+            Naziv konta
+        </th>
+        <th>
+            Konto cetvorocifreni
+        </th>
+        <th>
+            Konto sestocifreni
+        </th>
+        <th>
+            Analiticki konto
+        </th>
+    </tr>
+
+    <tr th:each="ko:${kontniokvirlist}">
+
+        <td th:text="${ko.kontniOkvirID}"/>
+
+        <td th:text="${ko.konto}"/>
+
+        <td th:text="${ko.nazivKonta}"/>
+
+        <td th:text="${ko.kontoCetvorocifreni}"/>
+
+        <td th:text="${ko.kontoSestocifreni}"/>
+
+        <td th:text="${ko.analitickiKonto}"/>
+    </tr>
+
+</table>
+</body>
+</html>
