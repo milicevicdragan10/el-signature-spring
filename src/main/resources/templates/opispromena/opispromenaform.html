@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Unos/Izmena opisa promene</title>
+</head>
+<body>
+
+<form th:object="${noviOpisPromene}" th:action="@{/opispromenanew/}" method="post">
+    <input type="hidden" th:field="*{id}"/>
+     <br/>
+
+    <label>Naziv opisa promene:</label>
+    <input type="text" th:field="*{nazivOpisaPromene}"/>
+
+    <br/>
+    <button type="submit" class="btn btn-primary">Sacuvaj</button>
+</form>
+
+</body>
+</html>

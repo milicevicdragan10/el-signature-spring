@@ -20,12 +20,22 @@ public class OpisPromeneImpl implements OpisPromeneService {
     }
 
     @Override
-    public void deleteById(Long idToDelete) {
+    public OpisPromene vratiOpisPromenePoId(Long l) {
+        return null;
+    }
+
+    @Override
+    public void obrisiPoId(Long izZaBrisanje) {
 
     }
 
     @Override
-    public OpisPromene findById(Long l) {
-        return null;
+    public void kreirajNovi(OpisPromene opisPromene) {
+        opisPromeneRepository.save(opisPromene);
+    }
+
+    @Override
+    public void izmeniOpisPromene(Long id, OpisPromene opisPromene) {
+
     }
 }

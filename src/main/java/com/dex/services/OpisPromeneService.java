@@ -6,8 +6,8 @@ import java.util.List;
 
 public interface OpisPromeneService {
     List<OpisPromene> vratiListuOpisaPromena();
-
-    void deleteById(Long idToDelete);
-
-    OpisPromene findById(Long l);
+    OpisPromene vratiOpisPromenePoId(Long l);
+    void kreirajNovi(OpisPromene opisPromene);
+    void izmeniOpisPromene(Long id, OpisPromene opisPromene);
+    void obrisiPoId(Long izZaBrisanje);
 }
