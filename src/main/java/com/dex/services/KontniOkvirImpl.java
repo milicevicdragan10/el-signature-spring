@@ -20,13 +20,23 @@ public class KontniOkvirImpl implements KontniOkvirService {
     }
 
     @Override
-    public void deleteById(Long idToDelete) {
+    public KontniOkvir vratiKontniOkvirPoId(Long l) {
+        return null;
+    }
+
+    @Override
+    public void kreirajNoviKO(KontniOkvir kontniOkvir) {
+        kontniOkvirRepository.save(kontniOkvir);
+    }
+
+    @Override
+    public void izmeniKontniOkvir(Long id, KontniOkvir kontniOkvir) {
 
     }
 
     @Override
-    public KontniOkvir findById(Long l) {
-        return null;
+    public void obrisiPoId(Long izZaBrisanje) {
+
     }
 }
 

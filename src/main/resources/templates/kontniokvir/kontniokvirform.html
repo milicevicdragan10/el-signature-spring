@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Unos Kontnog okvira</title>
+</head>
+<body>
+
+<form th:object="${noviKontniOkvir}" th:action="@{/kontniokvirnew/}" method="post">
+    <input type="hidden" th:field="*{kontniOkvirID}"/>
+    <br/>
+
+    <label>Konto:</label>
+    <input type="text" th:field="*{konto}"/>
+
+    <label>Naziv konta:</label>
+    <input type="text" th:field="*{nazivKonta}"/>
+
+    <label>Konto cetvorocifreni:</label>
+    <input type="text" th:field="*{kontoCetvorocifreni}"/>
+
+    <label>Konto sestocifreni:</label>
+    <input type="text" th:field="*{kontoSestocifreni}"/>
+
+    <label>Analiticki konto:</label>
+    <input type="text" th:field="*{analitickiKonto}"/>
+    <br/>
+
+    <button type="submit" class="btn btn-primary">Sacuvaj Kontni Okvir</button>
+
+</form>
+</body>
+</html>

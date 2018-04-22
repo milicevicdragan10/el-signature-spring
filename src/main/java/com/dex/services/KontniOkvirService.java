@@ -6,8 +6,8 @@ import java.util.List;
 
 public interface KontniOkvirService {
     List<KontniOkvir> vratiListuKontnihOkvira();
-
-    void deleteById(Long idToDelete);
-
-    KontniOkvir findById(Long l);
+    KontniOkvir vratiKontniOkvirPoId(Long l);
+    void kreirajNoviKO(KontniOkvir kontniOkvir);
+    void izmeniKontniOkvir(Long id, KontniOkvir kontniOkvir);
+    void obrisiPoId(Long izZaBrisanje);
 }
