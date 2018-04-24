@@ -1,0 +1,25 @@
+html,body{
+    background-color: lavender;
+}
+
+.navbar-default{
+    width:98vw;
+    margin-left: 1vw;
+    background-color: #337ab7;
+    border: 2px solid black;
+}
+
+.navbar-default .navbar-nav > li > a{
+    color:black;
+    font-weight: bold;
+}
+
+.navbar-default .navbar-nav > .active > a{
+    background-color: darkturquoise;
+    color:white;
+    font-weight: bold;
+}
+
+.navbar-default .navbar-nav > .hover > a{
+    background-color: lightblue;
+}
