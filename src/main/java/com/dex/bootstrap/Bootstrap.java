@@ -2,8 +2,10 @@ package com.dex.bootstrap;
 
 import com.dex.model.KontniOkvir;
 import com.dex.model.OpisPromene;
+import com.dex.model.User;
 import com.dex.repositories.KontniOkvirRepository;
 import com.dex.repositories.OpisPromeneRepository;
+import com.dex.repositories.UserRepository;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
@@ -12,10 +14,12 @@ import org.springframework.transaction.annotation.Transactional;
 public class Bootstrap implements ApplicationListener<ContextRefreshedEvent> {
     private OpisPromeneRepository opisPromeneRepository;
     private KontniOkvirRepository kontniOkvirRepository;
+    private UserRepository userRepository;
 
-    public Bootstrap(OpisPromeneRepository opisPromeneRepository, KontniOkvirRepository kontniOkvirRepository) {
+    public Bootstrap(OpisPromeneRepository opisPromeneRepository, KontniOkvirRepository kontniOkvirRepository, UserRepository userRepository) {
         this.opisPromeneRepository = opisPromeneRepository;
         this.kontniOkvirRepository = kontniOkvirRepository;
+        this.userRepository = userRepository;
     }
 
     @Transactional
@@ -54,6 +58,13 @@ public class Bootstrap implements ApplicationListener<ContextRefreshedEvent> {
         kontniOkvirRepository.save(konto1);
         kontniOkvirRepository.save(konto2);
         kontniOkvirRepository.save(konto3);
+
+        User user1=new User();
+        user1.setIme("Dragan");
+        user1.setPrezime("Milicevic");
+        user1.setKorisnickoIme("duck");
+        user1.setLozinka("d123");
+        userRepository.save(user1);
     }
 
 
